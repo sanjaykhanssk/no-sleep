@@ -7,18 +7,18 @@ import random
 def gen_random():
 	return random.randint(200,300)
 old_x , old_y = pyautogui.position()
-
-print("Ok, I'm Awake")
+pyautogui.FAILSAFE = False
+print("Ok")
 
 while 1:
 	#sleep for 5*60 => 5mins	
-	time.sleep(1)
+	time.sleep(120)
 	
 	c_x , c_y = pyautogui.position()
+	x , y = gen_random() ,gen_random()
 
-	if (old_x,old_y) == (c_x,c_y):
-		x , y = gen_random() ,gen_random()
+	if old_x == c_x and old_y == c_y:
 		pyautogui.moveTo(x,y,duration=0.10)
-		print(True)
-	old_x, old_y = x, y
+
+	old_x, old_y = c_x , c_y
 	
