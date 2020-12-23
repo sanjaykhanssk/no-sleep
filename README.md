@@ -7,7 +7,8 @@ A simple pyautogui program that moves mouse position on every 300s if mouse move
 Tested only on linux
 
 # Requirements
-sudo apt-get install scrot
+sudo apt-get install scrot <br/>
+sudo apt-get install python3-tk python3-dev <br/>
 pip install pyautogui
 
 # Setup Custom command
